@@ -188,3 +188,31 @@ RENAME TO new_table_name;
 ```
 DROP TABLE IF EXISTS mytable;
 ```
+
+## Normalization
+
+### 1NF
+
+- Using row order to convey information is not permitted.
+  - e.g: Display the names in order from tallest to shortest.
+- Mixing data types within the same column violates 1NF.
+- A table without a **primary key** violates 1NF.
+- Storing a repeating group of data items on a single row violates the 1NF.
+
+### 2NF
+
+![Not in 2NF](./player_inventory.png 'Not in 2 NF')
+
+- This must follow 1NF.
+- Each non-key attribute must depend on the entire primary key.
+
+![In 2NF](./2NF.png 'IN 2 NF')
+
+### 3NF
+
+![Not in 3NF](./NotIn3NF.png 'Not in 3 NF')
+![In 3NF](./3NF.png 'In 3 NF')
+
+### Summary
+
+![Summary](Summary.png 'Summary')
